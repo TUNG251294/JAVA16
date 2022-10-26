@@ -1,16 +1,13 @@
 package Lesson16.ReadAndWriteFile;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.FileReader;
-import java.io.FileWriter;
+import java.io.*;
 
 public class ReadAndWriteClass {
     void findMaxAndRead(String pathLine){
         try {
             FileReader fr = new FileReader(pathLine);
             BufferedReader cache = new BufferedReader(fr);  /*tao vung dem*/
-            String line = "";
+            String line;
             int max = Integer.parseInt(cache.readLine());
 
             while ((line = cache.readLine()) != null){
@@ -27,7 +24,7 @@ public class ReadAndWriteClass {
             cache02.write(Integer.toString(max));   /*FileWriter khong in kieu so vao file nen phai chuyen sang kieu String*/
             cache02.close();
 
-        } catch (Exception e){
+        } catch (IOException e){
                 e.printStackTrace();
         }
     }

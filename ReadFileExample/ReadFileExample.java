@@ -1,9 +1,6 @@
 package Lesson16.ReadFileExample;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
+import java.io.*;
 
 public class ReadFileExample {
     void readFileText(String pathLine){
@@ -24,7 +21,7 @@ public class ReadFileExample {
             System.out.println("Sum: " + Sum);
         }
 
-        } catch(Exception e){
+        } catch(IOException e){
             System.err.println("file k ton tai hoac co loi");;
         }
     }
